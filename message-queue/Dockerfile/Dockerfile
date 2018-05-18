@@ -7,8 +7,8 @@ COPY sources.list /etc/apt/
 
 # Install rabbitmq-server
 RUN apt-get update && \
-	apt-get install software-properties-common -y && \
-	apt-get dist-upgrade -y && \
+    apt-get install software-properties-common -y && \
+    apt-get dist-upgrade -y && \
     apt-get install rabbitmq-server -y
 
 # Push the startup script
