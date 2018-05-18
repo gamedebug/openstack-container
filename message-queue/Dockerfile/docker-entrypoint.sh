@@ -8,6 +8,7 @@ fi
 service rabbitmq-server start && \
 rabbitmqctl add_user $RABBITMQ_ADMIN_USERNAME $RABBITMQ_ADMIN_PASSWORD && \
 rabbitmqctl set_user_tags $RABBITMQ_ADMIN_USERNAME administrator && \
+rabbitmqctl set_permissions $RABBITMQ_ADMIN_USERNAME ".*" ".*" ".*" && \
 rabbitmqctl add_user $RABBITMQ_QUEUE_USERNAME $RABBITMQ_QUEUE_PASSWORD
 rabbitmqctl set_permissions $RABBITMQ_QUEUE_USERNAME ".*" ".*" ".*" && \
 rabbitmq-plugins enable rabbitmq_management
