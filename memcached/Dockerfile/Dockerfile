@@ -7,7 +7,7 @@ COPY sources.list /etc/apt/
 
 # Install memcached
 RUN apt-get update && \
-    apt-get install memcached python-memcache -y
+    apt-get install memcached -y
 
 # Push the startup script
 COPY docker-entrypoint.sh /usr/local/bin/
